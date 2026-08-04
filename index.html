@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CORINTHIANS | O Time do Povo</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===== CORES DO TIMÃO ===== 
+#000000 = preto - manto sagrado
+#E30613 = vermelho sangue - raça
+#FFFFFF = branco - paz
+#121212 = preto suave
+*/
+:root{ --preto:#000; --vermelho:#E30613; --branco:#fff; --cinza:#121212; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--preto); color:var(--branco); font-family:'Inter',sans-serif; overflow-x:hidden}
+.container{max-width:1200px; margin:0 auto; padding:0 20px}
+
+/* HEADER */
+header{position:fixed; top:0; width:100%; z-index:99; background:rgba(0,0,0,.9); backdrop-filter:blur(10px); border-bottom:3px solid var(--vermelho); padding:12px 0}
+.nav{display:flex; justify-content:space-between; align-items:center}
+.logo{display:flex; align-items:center; gap:12px; font-family:'Anton'; font-size:26px; letter-spacing:1px}
+.escudo{width:40px; height:40px; background:var(--branco); color:var(--preto); border-radius:50%; display:grid; place-items:center; font-family:'Anton'; border:3px solid var(--vermelho)}
+.menu a{color:var(--branco); text-decoration:none; font-family:'Bebas Neue'; font-size:18px; letter-spacing:1px; margin-left:16px}
+.menu a:hover{color:var(--vermelho)}
+
+/* HERO */
+.hero{height:100vh; position:relative; display:flex; align-items:center; background:#000; overflow:hidden}
+.hero-bg{position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1577223625816-7546f13df25d?q=80&w=2000') center/cover; opacity:.35; filter:grayscale(100%) contrast(1.2)}
+.hero::after{content:''; position:absolute; inset:0; background:linear-gradient(90deg, #000 20%, transparent 70%), linear-gradient(to top, #000, transparent)}
+.hero-content{position:relative; z-index:2}
+.hero h1{font-family:'Anton'; font-size:18vw; line-height:.85; color:var(--branco); -webkit-text-stroke:3px var(--vermelho); text-shadow: 6px 6px 0 #000}
+@media(min-width:900px){.hero h1{font-size:160px}}
+.sub-hero{margin-top:20px; display:flex; gap:12px; flex-wrap:wrap}
+.tag{background:var(--vermelho); padding:8px 16px; font-family:'Bebas Neue'; font-size:18px; transform:skew(-10deg)}
+.tag.preto{background:var(--branco); color:#000}
+
+/* SEÇÕES */
+section{padding:80px 0}
+.titulo{font-family:'Anton'; font-size:70px; line-height:.9; text-transform:uppercase}
+@media(min-width:900px){.titulo{font-size:110px}}
+.titulo span{color:var(--vermelho)}
+
+/* HISTORIA */
+.historia{background:var(--branco); color:#000; border-radius:40px 40px 0 0; margin-top:-40px; position:relative; z-index:3}
+.grid{display:grid; gap:16px; grid-template-columns:1fr 1fr}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+
+/* CARDS IDOLOS */
+.idolo{background:var(--cinza); border:1px solid rgba(255,255,255,.1); border-left:4px solid var(--vermelho); border-radius:16px; padding:20px; transition:.3s}
+.idolo:hover{transform:translateY(-5px); border-left-color:var(--branco)}
+.idolo h3{font-family:'Bebas Neue'; font-size:28px; letter-spacing:1px}
+.idolo small{color:var(--vermelho); font-weight:900}
+
+/* TITULOS */
+.titulo-card{background:linear-gradient(135deg, #000, #222); border:1px solid rgba(227,6,19,.3); border-radius:20px; padding:24px; text-align:center}
+.titulo-card h3{font-family:'Anton'; font-size:40px; color:var(--vermelho)}
+.ano{font-family:'Bebas Neue'; font-size:22px; background:var(--branco); color:#000; display:inline-block; padding:2px 10px; transform:skew(-10deg)}
+
+/* HINO */
+.hino{background:var(--vermelho); color:var(--branco); border-radius:40px}
+.hino pre{font-family:'Inter'; white-space:pre-wrap; line-height:1.8; font-weight:700; font-size:16px; background:rgba(0,0,0,.2); padding:20px; border-radius:16px}
+
+footer{padding:50px 0; text-align:center; background:#000; border-top:1px solid #222}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo"><div class="escudo">C</div> CORINTHIANS</div>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#historia">História</a>
+      <a href="#idolos">Ídolos</a>
+      <a href="#titulos">Títulos</a>
+      <a href="#hino">Hino</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO - BANNER DO TIMÃO -->
+<div id="inicio" class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <h1>CORIN<br>THIANS</h1>
+    <div class="sub-hero">
+      <div class="tag">1910 • O TIME DO POVO</div>
+      <div class="tag preto">30 MILHÕES DE LOUCOS</div>
+    </div>
+    <p style="max-width:450px; margin-top:24px; opacity:.7; line-height:1.6">
+      Fundado por operários no Bom Retiro. O único que nasceu do povo. 
+      Da Democracia Corinthiana ao Mundial de 2012 contra o Chelsea. Aqui é Corinthians.
+    </p>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<section id="historia" class="historia">
+  <div class="container">
+    <h2 class="titulo">HISTÓRIA<br><span>DE RAÇA</span></h2>
+    <div style="max-width:800px; margin-top:30px; line-height:1.9">
+      <p><b>1º de setembro de 1910, às 20h30.</b> Cinco operários - Anselmo Correia, Antônio Pereira, Carlos Silva, Joaquim Ambrósio e Raphael Perrone - se inspiram no Corinthian FC inglês e fundam o Sport Club Corinthians Paulista no Bom Retiro.</p><br>
+      <p>O primeiro clube a abrir as portas para os pobres. Enquanto outros eram de elite, o Corinthians era do povo, preto, operário. Daí vem o apelido que a gente mais ama.</p><br>
+      <p><b>1982 - Democracia Corinthiana:</b> Sócrates, Casagrande e Wladimir implantam voto no clube em plena ditadura militar. O futebol mais político da história do Brasil.</p><br>
+      <p><b>2012 - O ano eterno:</b> Libertadores invicta e Mundial contra o Chelsea. Cássio, Guerrero, Sheik. O bando de loucos invadiu o Japão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IDOLOS -->
+<section id="idolos">
+  <div class="container">
+    <h2 class="titulo">ÍDOLOS<br>ETERNOS</h2>
+    <div class="grid" style="margin-top:30px">
+      <div class="idolo"><small>DOUTOR</small><h3>SÓCRATES</h3><p style="opacity:.6; font-size:14px">Médio, 1978-84. Idealizador da Democracia Corinthiana. 172 gols. Gênio.</p></div>
+      <div class="idolo"><small>REIZINHO</small><h3>RIVELINO</h3><p style="opacity:.6; font-size:14px">1974-78. Patada Atômica. Veio do rival e virou ídolo máximo nos anos 70.</p></div>
+      <div class="idolo"><small>REI DO TIMÃO</small><h3>MARCELINHO CARIOCA</h3><p style="opacity:.6; font-size:14px">Pé-de-Anjo. 1994-01. 206 gols, faltas impossíveis. Amado e odiado.</p></div>
+      <div class="idolo"><small>GIGANTE</small><h3>CÁSSIO</h3><p style="opacity:.6; font-size:14px">2012-... Defendeu o chute do Diego Souza. O maior goleiro da nossa história.</p></div>
+      <div class="idolo"><small>FENÔMENO</small><h3>RONALDO</h3><p style="opacity:.6; font-size:14px">2009-11. Trouxe o mundo pro Parque São Jorge. Paulistão e Copa do Brasil.</p></div>
+      <div class="idolo"><small>LOUCO DA FIEL</small><h3>EMERSON SHEIK</h3><p style="opacity:.6; font-size:14px">2011-15. Dois gols na final da Libertadores 2012. Malvadão eterno.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TITULOS -->
+<section id="titulos" style="background:var(--cinza)">
+  <div class="container">
+    <h2 class="titulo">SALA DE<br><span>TROFÉUS</span></h2>
+    <div class="grid" style="margin-top:30px">
+      <div class="titulo-card"><div class="ano">2012</div><h3>LIBERTADORES</h3><p>Invicto • vs Boca Juniors</p></div>
+      <div class="titulo-card"><div class="ano">2000 • 2012</div><h3>MUNDIAL FIFA</h3><p>Bi-Mundial • vs Vasco e Chelsea</p></div>
+      <div class="titulo-card"><div class="ano">7X</div><h3>BRASILEIRÃO</h3><p>1990, 98, 99, 2005, 11, 15, 17</p></div>
+      <div class="titulo-card"><div class="ano">30X</div><h3>PAULISTÃO</h3><p>Maior campeão • 1914 ao 2019</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HINO -->
+<section id="hino" class="hino">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2 class="titulo" style="font-size:60px">HINO DA<br>FIEL</h2>
+        <pre>
+Salve o Corinthians,
+O campeão dos campeões.
+Eternamente,
+Dentro dos nossos corações.
+
+Salve o Corinthians,
+De tradições e glórias mil.
+Tu és o orgulho,
+Dos desportistas do Brasil
+
+Teu passado é uma bandeira,
+Teu presente é uma lição.
+Figuras entre os primeiros
+Do nosso esporte bretão!
+
+Corinthians grande,
+Sempre altaneiro.
+És do Brasil,
+O clube mais brasileiro!
+        </pre>
+      </div>
+      <div>
+        <!-- PLAYER DO HINO -->
+        <iframe style="border-radius:16px" src="https://open.spotify.com/embed/track/5I1aUq4vHS2Q6M7p8K4b9x?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p style="font-size:11px; margin-top:10px; opacity:.8">* Se o player não carregar, busca "Hino do Corinthians" no Spotify. A letra tá aí em cima pra cantar junto!</p>
+        <div style="margin-top:20px; background:#000; padding:16px; border-radius:12px">
+          <b style="font-family:'Bebas Neue'; font-size:20px">VAI CORINTHIANS!</b><br>
+          <small>Neo Química Arena • 49.205 loucos • Itaquera</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="font-family:'Anton'; font-size:32px">AQUI É CORINTHIANS PORRA!</div>
+    <p style="opacity:.4; margin-top:10px; font-size:12px">Blog feito pela Fiel • Preto #000 • Vermelho #E30613 • Branco #FFF • 1910-∞</p>
+  </div>
+</footer>
+
+</body>
+</html>
